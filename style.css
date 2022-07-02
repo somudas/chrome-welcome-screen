@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    background-color: #202124;
+    font-family: Roboto;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+h2{
+    color: #aaa;
+    
+}
+h1{
+    margin:0;
+    color: #fff;
+    font-size: 4em;
+    font-weight: bolder;
+}
+.top{
+    position: relative;
+    min-height: 400px;
+    min-width: 878px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    background: url('./assets/icon.svg');
+    background-size: contain;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.lines{
+    position: absolute;
+    -webkit-mask: url('./assets/streamer_line.svg');
+    -webkit-mask-size: 100px 5px;
+    background-color: rgb(95, 99, 114);
+    background-position-x: 20px;
+    height: 5px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    animation: dotted-line 1s infinite linear;
+}
+#line1{
+    transform: translateX(-50%) rotate(230deg) translateX(-120px);
+}
+#line2{
+    transform: translateX(-50%) rotate(45deg) translateX(-120px);
+}
+#line3{
+    transform: translateX(-50%) rotate(-37deg) translateX(-120px);
+}
+#line4{
+    transform: translateX(-50%) rotate(145deg) translateX(-120px);
+}
+
+@keyframes dotted-line{
+    from{
+        -webkit-mask-position-x: 0px;    
+    }
+    to{
+        -webkit-mask-position-x: -14px;
+        
+    }
+}
